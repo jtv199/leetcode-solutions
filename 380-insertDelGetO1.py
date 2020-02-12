@@ -1,11 +1,12 @@
 import random
 class RandomizedSet:
-    s = set([])
+    s = None
 
     def __init__(self):
         """
         Initialize your data structure here.
         """
+        self.s = set()
 
 
     def insert(self, val: int) -> bool:

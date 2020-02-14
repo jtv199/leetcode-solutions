@@ -66,7 +66,8 @@ class Solution:
                 result[i] = int(median)
 
 
-        nums = result
+        for i in range(e):
+            nums[i] = result[i]
         print(nums,result)
 
 #         for i in range(half+1):

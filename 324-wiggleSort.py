@@ -21,6 +21,7 @@ class Solution:
         same = []
         smaller = []
         result = [None]*(e)
+        even = e % 2 = 0
 
         for i in nums:
             if i > median:
@@ -36,30 +37,34 @@ class Solution:
 
         #if length is even
         #bigger in the first odd slots and smaller in the last even slots
-        if e % 2 == 0:
-            for i in range(e-1,-1,-2):
-                if not bigger:
-                    break
-                s = bigger.pop()
-                result[i] = s
+        # if e % 2 == 0:
+        #     for i in range(e-1,-1,-2):
+        #
+        #         if not bigger:
+        #             break
+        #         s = bigger.pop()
+        #         result[i] = s
+        #
+        #     for i in range(0,e,2):
+        #         if not smaller:
+        #             break
+        #         b = smaller.pop()
+        #         result[i] = b
+        # else:
+        #     for i in range(e,-1,-2):
+        #         if not bigger:
+        #             break
+        #         s = bigger.pop()
+        #         result[i] = s
+        #
+        #     for i in range(0,e,2):
+        #         if not smaller:
+        #             break
+        #         b = smaller.pop()
+        #         result[i] = b
+        if even:
 
-            for i in range(0,e,2):
-                if not smaller:
-                    break
-                b = smaller.pop()
-                result[i] = b
-        else:
-            for i in range(e,-1,-2):
-                if not bigger:
-                    break
-                s = bigger.pop()
-                result[i] = s
 
-            for i in range(2,e,2):
-                if not smaller:
-                    break
-                b = smaller.pop()
-                result[i] = b
 
         for i in range(len(result)):
             if result[i] == None:
